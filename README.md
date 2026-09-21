@@ -41,3 +41,24 @@ public:
 };
 
 #endif
+
+#include "Book.h"
+#include <iostream>
+#include <cctype>
+
+Book::Book() {
+    name = "未知书名";
+    isbn = "0000000000000";
+    publisher = "未知出版社";
+    price = 0.0;
+    pages = 0;
+    inStock = true;
+}
+
+Book::Book(string n, string i, string p, double pr, int pg) {
+    name = n;
+    isbn = i;
+    publisher = p;
+    price = (pr > 0) ? pr : 0.0;   
+    pages = (pg > 0) ? pg : 0;     
+    inStock = true;
